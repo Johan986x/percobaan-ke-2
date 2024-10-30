@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kelinci Percobaan</title>
+    <style>
+        /* Gaya umum untuk body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Header dengan gradien */
+        header {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: #fff;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        /* Gaya untuk h1 */
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        /* Container untuk konten utama dengan efek hover */
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            animation: slideInFromBottom 1s ease-out;
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Efek bayangan saat hover pada container */
+        .container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Gaya gambar profil */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
+            animation: zoomIn 1s ease;
+        }
+
+        /* Efek hover pada gambar */
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Gaya paragraf */
+        p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInText 1s ease forwards 1.2s;
+        }
+
+        /* Tombol dengan animasi hover */
+        .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 1em;
+            color: #fff;
+            background: #4e54c8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #8f94fb;
+        }
+
+        /* Animasi fadeIn untuk teks dan body */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animasi zoomIn untuk gambar profil */
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Animasi slideIn dari atas untuk header */
+        @keyframes slideInFromTop {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        /* Animasi slideIn dari bawah untuk container */
+        @keyframes slideInFromBottom {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Animasi fadeIn untuk teks */
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Profil S A N Z</h1>
+    </header>
+
+    <div class="container">
+        <img src="johan.jpg" alt="Foto Profil" class="profile-img">
+        <p>Selamat datang di halaman profil saya! Disini saya hanya mencoba DDOS attack ke web yang saya buat .</p>
+        
+        <!-- Tombol interaktif -->
+        <button class="btn">hanya percobaan</button>
+    </div>
+</body>
+</html>
